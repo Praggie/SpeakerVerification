@@ -1,0 +1,1296 @@
+15:58:09.599 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+15:58:11.540 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+15:58:11.558 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+15:58:11.558 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+15:58:11.630 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0xf72a90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+15:58:11.630 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+15:58:11.682 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x20c1c10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+15:58:11.683 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+15:58:11.688 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x148ecf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+15:58:11.694 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [TrainTarget, --inputFeatureFilename, 84454757, --targetIdList, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx, --config cfg/TrainTarget.cfg]
+15:58:11.698 INFO  c.millenium.speaker.UserEnrollment - TrainTarget [ ConfigCheckException 0x249a420 ]
+  message   = "Parameter 'MAPAlgo' mandatory in the config"
+  source file = ConfigChecker.cpp
+  line number = 129
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--verboseLevel           level of the berose information 0=no verbose, 1=normal, 2=more <INTEGER>
+--inputFeatureFilename   feature filename or filename of a text file with the list of feature filenames <STRING>
+--targetIdList           The file with the list of models to train. A line is composed by client_id file1 file2 ... <STRING>
+--inputWorldFilename     if set, the init is based on a model get from this file, else frrom scratch <STRING>
+--mixtureServer          If set save the complete mixture server in the filename (FUTURE USED, TODO) <STRING>
+--initByClient           For by lael option. Modify the initial model for statistic estimation (EM), default world, if set client <BOOLEAN>
+--saveEmptyModel         If no data is available for a model (or a lable model), save the not adapted model (world or global client) <BOOLEAN>
+--useIdForSelectedFrame  If set, the segments with label ID are used for training the client model ID <BOOLEAN>
+--labelSelectedFrames    The segments with this label are used for training the worldmodel (if UseIdForSelectedFrame is not used) <STRING>
+--baggedFrameProbability Defines the % of frames taken for each iterations (default 1) <FLOAT>
+--nbTrainIt              number of it (default=1) <INTEGER>
+--normalizeModel         if set to true,  normalize the world (at each iteration) <BOOLEAN>
+--normalizeModelMeanOnly Used only if normalizeModel is On, says if only mean parameters should be normalized <BOOLEAN>
+--normalizeModelNbIt     Used only if noramlizeModelMeanOnly is set, nb of normalization it <INTEGER>
+--meanAdapt              Mean adaptation (default false) <BOOLEAN>
+--varAdapt               Variance adaptation (default false) <BOOLEAN>
+--weightAdapt            Weight adaptation (default false) <BOOLEAN>
+--MAPAlgo                Adaptation method (MAPConst,MAPConst2,MAPOccDep,MLLR) <STRING>
+--MAPAlphaMean           a priori proba for world <FLOAT>
+--MAPAlphaVar            a priori proba for world <FLOAT>
+--MAPAlphaWeight         a priori proba for world <FLOAT>
+--MAPRegFactorMean       Reg factor <FLOAT>
+--MAPRegFactorVar        Reg factor <FLOAT>
+--MAPRegFactorWeight     Reg factor <FLOAT>
+--info                   If info is requested, just info on the train set is outputed <BOOLEAN>
+--useModelData           New MAP algo based on ML estimate of the training data <BOOLEAN>
+--initModel              With model based, use a specific model for initialize the EM estimate (default=world <STRING>
+--outputAdaptParam       Saving a vector (matrix if MLLR, weights if MAP) instead of a mixture <BOOLEAN>
+
+
+15:59:50.708 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+15:59:50.935 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+15:59:50.937 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+15:59:50.938 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+15:59:50.941 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0xab1a90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+15:59:50.941 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+15:59:50.943 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x10eac10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+15:59:50.944 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+15:59:50.947 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x26c2cf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+15:59:50.948 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [TrainTarget, --inputFeatureFilename, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx, --targetIdList, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx, --config cfg/TrainTarget.cfg]
+15:59:50.952 INFO  c.millenium.speaker.UserEnrollment - TrainTarget [ ConfigCheckException 0x227f580 ]
+  message   = "Parameter 'MAPAlgo' mandatory in the config"
+  source file = ConfigChecker.cpp
+  line number = 129
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--verboseLevel           level of the berose information 0=no verbose, 1=normal, 2=more <INTEGER>
+--inputFeatureFilename   feature filename or filename of a text file with the list of feature filenames <STRING>
+--targetIdList           The file with the list of models to train. A line is composed by client_id file1 file2 ... <STRING>
+--inputWorldFilename     if set, the init is based on a model get from this file, else frrom scratch <STRING>
+--mixtureServer          If set save the complete mixture server in the filename (FUTURE USED, TODO) <STRING>
+--initByClient           For by lael option. Modify the initial model for statistic estimation (EM), default world, if set client <BOOLEAN>
+--saveEmptyModel         If no data is available for a model (or a lable model), save the not adapted model (world or global client) <BOOLEAN>
+--useIdForSelectedFrame  If set, the segments with label ID are used for training the client model ID <BOOLEAN>
+--labelSelectedFrames    The segments with this label are used for training the worldmodel (if UseIdForSelectedFrame is not used) <STRING>
+--baggedFrameProbability Defines the % of frames taken for each iterations (default 1) <FLOAT>
+--nbTrainIt              number of it (default=1) <INTEGER>
+--normalizeModel         if set to true,  normalize the world (at each iteration) <BOOLEAN>
+--normalizeModelMeanOnly Used only if normalizeModel is On, says if only mean parameters should be normalized <BOOLEAN>
+--normalizeModelNbIt     Used only if noramlizeModelMeanOnly is set, nb of normalization it <INTEGER>
+--meanAdapt              Mean adaptation (default false) <BOOLEAN>
+--varAdapt               Variance adaptation (default false) <BOOLEAN>
+--weightAdapt            Weight adaptation (default false) <BOOLEAN>
+--MAPAlgo                Adaptation method (MAPConst,MAPConst2,MAPOccDep,MLLR) <STRING>
+--MAPAlphaMean           a priori proba for world <FLOAT>
+--MAPAlphaVar            a priori proba for world <FLOAT>
+--MAPAlphaWeight         a priori proba for world <FLOAT>
+--MAPRegFactorMean       Reg factor <FLOAT>
+--MAPRegFactorVar        Reg factor <FLOAT>
+--MAPRegFactorWeight     Reg factor <FLOAT>
+--info                   If info is requested, just info on the train set is outputed <BOOLEAN>
+--useModelData           New MAP algo based on ML estimate of the training data <BOOLEAN>
+--initModel              With model based, use a specific model for initialize the EM estimate (default=world <STRING>
+--outputAdaptParam       Saving a vector (matrix if MLLR, weights if MAP) instead of a mixture <BOOLEAN>
+
+
+16:00:42.333 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+16:00:42.558 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+16:00:42.560 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+16:00:42.561 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+16:00:42.564 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1a56a90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:00:42.564 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:00:42.567 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x236ec10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+16:00:42.567 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:00:42.572 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x119fcf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:00:42.574 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [TrainTarget, --inputFeatureFilename, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx, --targetIdList, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx, --config, cfg/TrainTarget.cfg]
+16:00:42.578 INFO  c.millenium.speaker.UserEnrollment - TrainTarget [ FileNotFoundException 0x15d3300 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/TrainTarget.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--verboseLevel           level of the berose information 0=no verbose, 1=normal, 2=more <INTEGER>
+--inputFeatureFilename   feature filename or filename of a text file with the list of feature filenames <STRING>
+--targetIdList           The file with the list of models to train. A line is composed by client_id file1 file2 ... <STRING>
+--inputWorldFilename     if set, the init is based on a model get from this file, else frrom scratch <STRING>
+--mixtureServer          If set save the complete mixture server in the filename (FUTURE USED, TODO) <STRING>
+--initByClient           For by lael option. Modify the initial model for statistic estimation (EM), default world, if set client <BOOLEAN>
+--saveEmptyModel         If no data is available for a model (or a lable model), save the not adapted model (world or global client) <BOOLEAN>
+--useIdForSelectedFrame  If set, the segments with label ID are used for training the client model ID <BOOLEAN>
+--labelSelectedFrames    The segments with this label are used for training the worldmodel (if UseIdForSelectedFrame is not used) <STRING>
+--baggedFrameProbability Defines the % of frames taken for each iterations (default 1) <FLOAT>
+--nbTrainIt              number of it (default=1) <INTEGER>
+--normalizeModel         if set to true,  normalize the world (at each iteration) <BOOLEAN>
+--normalizeModelMeanOnly Used only if normalizeModel is On, says if only mean parameters should be normalized <BOOLEAN>
+--normalizeModelNbIt     Used only if noramlizeModelMeanOnly is set, nb of normalization it <INTEGER>
+--meanAdapt              Mean adaptation (default false) <BOOLEAN>
+--varAdapt               Variance adaptation (default false) <BOOLEAN>
+--weightAdapt            Weight adaptation (default false) <BOOLEAN>
+--MAPAlgo                Adaptation method (MAPConst,MAPConst2,MAPOccDep,MLLR) <STRING>
+--MAPAlphaMean           a priori proba for world <FLOAT>
+--MAPAlphaVar            a priori proba for world <FLOAT>
+--MAPAlphaWeight         a priori proba for world <FLOAT>
+--MAPRegFactorMean       Reg factor <FLOAT>
+--MAPRegFactorVar        Reg factor <FLOAT>
+--MAPRegFactorWeight     Reg factor <FLOAT>
+--info                   If info is requested, just info on the train set is outputed <BOOLEAN>
+--useModelData           New MAP algo based on ML estimate of the training data <BOOLEAN>
+--initModel              With model based, use a specific model for initialize the EM estimate (default=world <STRING>
+--outputAdaptParam       Saving a vector (matrix if MLLR, weights if MAP) instead of a mixture <BOOLEAN>
+
+
+16:02:33.280 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+16:02:33.507 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+16:02:33.509 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+16:02:33.510 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+16:02:33.513 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x2303a90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:02:33.514 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:02:33.516 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1a0ac10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+16:02:33.517 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:02:33.520 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x26c4cf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:02:33.522 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [TrainTarget, --inputFeatureFilename, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx, --targetIdList, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx, --config, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/cfg/TrainTarget.cfg]
+16:02:33.526 INFO  c.millenium.speaker.UserEnrollment - TrainTarget - Load world model [world]
+[ FileNotFoundException 0x21c5d90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  gmm/world.gmm
+
+16:03:44.070 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+16:03:44.300 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+16:03:44.306 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+16:03:44.307 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+16:03:44.311 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x17eca90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:03:44.311 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:03:44.314 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1eb8c10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+16:03:44.315 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:03:44.318 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1c8bcf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:03:44.319 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [cd, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser, &&, TrainTarget, --inputFeatureFilename, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx, --targetIdList, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx, --config, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/cfg/TrainTarget.cfg]
+16:06:16.360 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+16:06:16.588 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+16:06:16.591 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+16:06:16.592 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+16:06:16.595 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1c4ca90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:06:16.595 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:06:16.598 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x23f3c10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+16:06:16.598 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:06:16.601 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1857cf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:06:16.603 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [cd /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser && TrainTarget --inputFeatureFilename /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --targetIdList /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --config /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/cfg/ TrainTarget.cfg]
+16:07:48.036 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+16:07:48.261 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+16:07:48.262 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+16:07:48.263 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+16:07:48.267 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1d61a90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:07:48.267 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:07:48.270 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1d31c10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+16:07:48.270 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:07:48.273 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0xbfecf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:07:48.275 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [cd /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser && TrainTarget --inputFeatureFilename /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --targetIdList /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --config /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/cfg/TrainTarget.cfg &> log/TrainTarget.log]
+16:16:32.664 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+16:16:32.891 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+16:16:32.894 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+16:16:32.895 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+16:16:32.898 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x7f0a90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:16:32.898 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:16:32.901 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x2576c10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+16:16:32.901 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:16:32.904 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1512cf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:16:32.906 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [cd . && cd /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser && TrainTarget --inputFeatureFilename /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --targetIdList /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --config /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/cfg/TrainTarget.cfg &> log/TrainTarget.log]
+16:17:04.929 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+16:17:05.155 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+16:17:05.157 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+16:17:05.158 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+16:17:05.161 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x259da90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:17:05.162 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:17:05.164 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1ebac10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+16:17:05.164 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:17:05.168 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x18d2cf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:17:05.170 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [pwd && cd /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser && TrainTarget --inputFeatureFilename /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --targetIdList /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --config /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/cfg/TrainTarget.cfg &> log/TrainTarget.log]
+16:19:01.526 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+16:19:01.753 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+16:19:01.755 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+16:19:01.756 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+16:19:01.759 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x2603a90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:19:01.760 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:19:01.763 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x260fc10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+16:19:01.763 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:19:01.768 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x78fcf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:19:01.770 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [cd /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser && TrainTarget --inputFeatureFilename /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --targetIdList /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --config /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/cfg/TrainTarget.cfg]
+16:19:57.170 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+16:19:57.403 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+16:19:57.404 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+16:19:57.405 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+16:19:57.408 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1da5a90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:19:57.409 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:19:57.411 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0xd76c10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+16:19:57.412 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:19:57.415 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1287cf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:19:57.416 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [cd /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser && TrainTarget --inputFeatureFilename /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --targetIdList /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --config /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/cfg/TrainTarget.cfg]
+16:25:55.108 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+16:25:55.342 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+16:25:55.344 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+16:25:55.347 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+16:25:55.350 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x15c3a90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:25:55.351 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:25:55.353 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1328c10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+16:25:55.354 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:25:55.357 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x22b9cf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:25:55.359 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [cd /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser && TrainTarget --inputFeatureFilename /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --targetIdList /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --config /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/cfg/TrainTarget.cfg]
+16:26:35.818 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+16:26:36.049 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+16:26:36.051 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+16:26:36.052 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+16:26:36.055 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x14d4a90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:26:36.056 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:26:36.059 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x1e64c10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+16:26:36.059 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:26:36.062 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0xf69cf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:26:36.064 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [cd /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser,  && TrainTarget --inputFeatureFilename /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --targetIdList /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --config /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/cfg/TrainTarget.cfg]
+16:31:58.699 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/preprocessing.sh, 84454757.wav]
+16:31:58.935 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [sfbcep, -m, -k, 0.97, -p19, -n, 24, -r, 22, -e, -D, -A, -F, PCM16, 84454757.wav, data/prm/84454757.tmp.prm]
+16:31:58.937 INFO  c.millenium.speaker.UserEnrollment - spf_output_stream_open(): cannot open input file data/prm/84454757.tmp.prm
+sfbcep error -- cannot open output stream data/prm/84454757.tmp.prm
+
+16:31:58.939 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_energy_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/]
+16:31:58.942 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0xa6aa90 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_energy_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:31:58.942 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [EnergyDetector, --config, cfg/EnergyDetector_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:31:58.946 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0x180ec10 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/EnergyDetector_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelFilesPath         path of input and output labels <STRING>
+--saveLabelFileExtension output labelFile extension <STRING>
+--labelOutputFrames      output label tag <STRING>
+--alpha                  threshold giving the percentage of data of the middle Gaussian to take into account <FLOAT>
+--segmentalMode          file to have a file by file behaviour <STRING>
+--thresholdMode          this parameter must be set to select 3 top gaussian. It's a default parameter <STRING>
+
+
+16:31:58.946 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [NormFeat, --config, cfg/NormFeat_SPro.cfg, --inputFeatureFilename, 84454757, --featureFilesPath, data/prm/, --labelFilesPath, data/lbl/]
+16:31:58.949 INFO  c.millenium.speaker.UserEnrollment - [ FileNotFoundException 0xa0ecf0 ]
+  message   = ""
+  source file = FileReader.cpp
+  line number = 101
+  fileName =  cfg/NormFeat_SPro.cfg
+--help                   Show this help
+--version                Show version information
+--config                 default config filename <STRING>
+--mode                   <norm: mean, var, warp normalization | info: save stats of file | featmap: feature mapping | FA EigenChannel Compensation > <STRING>
+--inputFeatureFilename   input feature - could be a simple feature file or a list of filename <STRING>
+--labelSelectedFrames    Only the frames from segments with this label  will be used <STRING>
+--fileMode               One normalisation for all the selected data, could be applied after segmental/window modes if both are selected <BOOLEAN>
+--segmentalMode          if set to true, one normalisation by segment is computed <BOOLEAN>
+--windowMode             if set to true, the normalisation is computed by windows <BOOLEAN>
+--windowDuration         Length of the window (for window mode) in seconds (default=5) <FLOAT>
+--windowComp             compensation factor for window mode (default =1.0 - no compensation <FLOAT>
+--writeAllFeatures       if set to true,values for all the input frames are outputed (default true) <BOOLEAN>
+--featureServerMode      FEATURE_WRITABLE to write normalized features <STRING>
+--outputInfoFilename     The complete output filename for the info file <STRING>
+--cmsOnly                If cmsOnly is set, only remove means from features (default false) <BOOLEAN>
+--varOnly                If cmsOnly is set, reduce only variance from features (default false) <BOOLEAN>
+--warp                   If warp is set, uses featureWarping (default false) <BOOLEAN>
+--warpBinCount           If warp is set, this parameter fixes the number of bins in the data histo (default=40) <INTEGER>
+--warpGaussHistoFilename for warping, if this parameter is set, it loads the destination histo, default it creates it (N(0,1)) <STRING>
+--warpAdd01Norm          for warping, add a global N(0,1) normalisation after warping (default false) <BOOLEAN>
+--externalStatsFilename  filename containing external stats to apply for normalization, usually obtained with info mode (opt.) <STRING>
+--frameLength            length of a frame, by default 10ms <FLOAT>
+
+
+16:31:58.950 INFO  c.millenium.speaker.UserEnrollment - Comando a ejecutar: [/bin/sh, -c, cd, /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser,  && TrainTarget --inputFeatureFilename /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --targetIdList /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/ndx/84454757.ndx --config /opt/datos/SPEAKER_VERIFICATION_FILES/testoneuser/cfg/TrainTarget.cfg]
+16:31:58.952 INFO  c.millenium.speaker.UserEnrollment - 
